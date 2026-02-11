@@ -158,18 +158,18 @@ g = sns.clustermap(df3, standard_scale=1, cmap="viridis_r",
                    annot=True, linecolor="w", linewidths=1)
 
 g.savefig("clustermap_standardized.png", dpi=300)
-plt.show()
+g.fig.show()
 
 
 # --------------------------Normalize (z-score)--------------------------
 g = sns.clustermap(df3, z_score=1, cmap="viridis_r", annot=True, linecolor="w")
 g.savefig("clustermap_zscore.png", dpi=300)
-plt.show()
+g.fig.show()
 
 # --------------------------Robust Normalization--------------------------
 g = sns.clustermap(df3, cmap="viridis_r", robust=True, annot=True, linecolor="w")
 g.savefig("clustermap_robust.png", dpi=300)
-plt.show()
+g.fig.show()
 
 print("Done. Outputs saved as PNG/CSV in the current folder.")
 
